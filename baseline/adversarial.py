@@ -1,3 +1,4 @@
+from operator import is_
 import torch
 import torch.nn.functional as F
 
@@ -26,7 +27,10 @@ def formal_verification_check(model, input_img, label, device, eps=0.05, num_sam
     """Robustness verification through random perturbations"""
     model.eval()
     input_img = input_img.to(device).unsqueeze(0)
-    base_pred = model(input_img).argmax(dim=1).item()
+    if torch._is_tensor(label):
+        base_pred = label.item()
+    else:
+        base_pred = int(label)
 
     success = True
     for _ in range(num_samples):
