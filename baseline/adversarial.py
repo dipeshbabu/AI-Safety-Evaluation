@@ -6,7 +6,7 @@ def pgd_attack(model, images, labels, device, eps=0.3, alpha=0.01, iters=40):
     """Projected Gradient Descent adversarial attack"""
     images = images.to(device)
     labels = labels.to(device)
-    ori_images = images.data.clone()
+    ori_images = images.detach().clone()
 
     for _ in range(iters):
         images.requires_grad = True
