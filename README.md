@@ -33,13 +33,10 @@ For methodology, analysis, and results, see the full paper:
 If you use this codebase or find our work helpful, please cite:
 
 ```bibtex
-@misc{mahato2025triguardtestingmodelsafety,
+@article{mahato2025triguard,
   title={TriGuard: Testing Model Safety with Attribution Entropy, Verification, and Drift},
-  author={Dipesh Tharu Mahato and Rohan Poudel and Pramod Dhungana},
-  year={2025},
-  eprint={2506.14217},
-  archivePrefix={arXiv},
-  primaryClass={cs.LG},
-  url={https://arxiv.org/abs/2506.14217}
+  author={Mahato, Dipesh Tharu and Poudel, Rohan and Dhungana, Pramod},
+  journal={arXiv preprint arXiv:2506.14217},
+  year={2025}
 }
 ```
